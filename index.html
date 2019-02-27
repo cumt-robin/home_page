@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Tusi的个人主页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="keyword" content="Tusi的个人主页,web前端,nodejs全栈,MVVM,响应式">
+    <meta name="description" content="Tusi的个人主页,专注web前端技术分享,nodejs全栈开发">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="Shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/jquery-ui-1.10.3.min.js"></script>
+    <script src="assets/js/jquery.fullPage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastIndex = 1;
+
+            if (window.innerWidth <= 1100) {
+				var DESIGN_WIDTH = 375;
+			} else {
+				var DESIGN_WIDTH = 1920;
+            }
+            
+            let convertFontSize = window.innerWidth / DESIGN_WIDTH * 100 + 'px';
+			$('html').css('fontSize', convertFontSize);
+
+            function triggerAnim(domID, animClass, cb) {
+                if (cb) {
+                    cb('start', $('#' + domID));
+                }
+                $(domID).removeClass();
+                $('#' + domID).removeClass().addClass(animClass + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    if (cb) {
+                        cb('end', $('#' + domID));
+                    }
+                });
+            }
+
+            $.fn.fullpage({
+                slidesColor: ['#1bbc9b', '#4BBFC3', '#F1F7EA', '#1bbc9b'],
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                navigation: true,
+                navigationColor: '#333',
+                keyboardScrolling: true,
+                loopBottom: true,
+                afterRender: function() {
+                    $('#fullPage-nav').addClass('firstpage');
+                    triggerAnim('page1Content', 'bounceInDown');
+                },
+                afterLoad: function(anchorLink, index) {
+                    switch (index) {
+                        case 1:
+                            $('#fullPage-nav').addClass('firstpage');
+                            triggerAnim('page1Content', 'bounceInDown');
+                            break;
+                        case 2:
+                            triggerAnim('page2Content', 'fadeInLeft');
+                            break;
+                        case 3:
+                            triggerAnim('page3Content', 'bounceInDown');
+                            break;
+                        case 4:
+                            triggerAnim('page4Content', 'bounceInDown');
+                            break;
+                    }
+                },
+                onLeave: function(index, direction) {
+                    lastIndex = index;
+                    switch (index) {
+                        case 1:
+                            $('#fullPage-nav').removeClass('firstpage');
+                            triggerAnim('page1Content', 'fadeOutUp');
+                            break;
+                        case 2:
+                            triggerAnim('page2Content', 'fadeOutRight');
+                            break;
+                        case 3:
+                            var animType = direction == 'up' ? 'fadeOutDown' : 'fadeOutUp';
+                            triggerAnim('page3Content', animType);
+                            break;
+                        case 4:
+                            triggerAnim('page4Content', 'fadeOutDown');
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="section">
+        <div id="page1Content">
+            <h3>我是Tusi</h3>
+            <p class="sub-title">一个不怎么怼产品的前端工程师</p>
+            <ul class="nav-icons">
+                <li>
+                    <a href="//blog.wbjiang.cn" target="_blank" title="我的博客">
+                        <i class="icon icon-blog"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//hexo.wbjiang.cn" target="_blank" title="hexo版博客">
+                        <i class="icon icon-hexo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//angular.wbjiang.cn" target="_blank" title="一个Angular demo">
+                        <i class="icon icon-angular"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/cumtRobin" target="_blank" title="Github">
+                        <i class="icon icon-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blog.csdn.net/weixin_41196185" target="_blank" title="CSDN">
+                        <i class="icon icon-csdn"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div id="page2Content">
+            <p>致力于前端领域，关注用户体验</p>
+            <p>业余也关注后端技术，也称得上略知一二</p>
+            <p>......</p>
+        </div>
+    </div>
+    <div class="section">
+        <div id="page3Content">
+            <h3 class="tags-title">以下是我的技能标签啦</h3>
+            <ul class="tag-icons">
+                <li>
+                    <i class="icon icon-vue"></i>
+                    <div class="tag-txt">Vue</div>
+                </li>
+                <li>
+                    <i class="icon icon-angular2"></i>
+                    <div class="tag-txt">Angular</div>
+                </li>
+                <li>
+                    <i class="icon icon-knockout"></i>
+                    <div class="tag-txt">Knockout.js</div>
+                </li>
+                <li>
+                    <i class="icon icon-jquery"></i>
+                    <div class="tag-txt">jQuery</div>
+                </li>
+                <li>
+                    <i class="icon icon-h5"></i>
+                    <div class="tag-txt">HTML5</div>
+                </li>
+                <li>
+                    <i class="icon icon-css3"></i>
+                    <div class="tag-txt">CSS3</div>
+                </li>
+                <li>
+                    <i class="icon icon-ele"></i>
+                    <div class="tag-txt">Element UI</div>
+                </li>
+                <li>
+                    <i class="icon icon-layui"></i>
+                    <div class="tag-txt">Layui</div>
+                </li>
+                <li>
+                    <i class="icon icon-nodejs"></i>
+                    <div class="tag-txt">Nodejs</div>
+                </li>
+                <li>
+                    <i class="icon icon-express"></i>
+                    <div class="tag-txt">Express.js</div>
+                </li>
+                <li>
+                    <i class="icon icon-socket"></i>
+                    <div class="tag-txt">WebSocket</div>
+                </li>
+                <li>
+                    <i class="icon icon-webpack"></i>
+                    <div class="tag-txt">Webpack</div>
+                </li>
+                <li>
+                    <i class="icon icon-gulp"></i>
+                    <div class="tag-txt">gulp.js</div>
+                </li>
+                <li>
+                    <i class="icon icon-sass"></i>
+                    <div class="tag-txt">SASS</div>
+                </li>
+                <li>
+                    <i class="icon icon-nwjs"></i>
+                    <div class="tag-txt">Node-Webkit</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <div id="page4Content">
+            <h3 class="contact">合作和交流请联系我</h3>
+            <ul class="nav-icons">
+                <li>
+                    <a href="//blog.wbjiang.cn" target="_blank" title="我的博客">
+                        <i class="icon icon-blog"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//hexo.wbjiang.cn" target="_blank" title="hexo版博客">
+                        <i class="icon icon-hexo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/cumtRobin" target="_blank" title="Github">
+                        <i class="icon icon-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://blog.csdn.net/weixin_41196185" target="_blank" title="CSDN">
+                        <i class="icon icon-csdn"></i>
+                    </a>
+                </li>
+            </ul>
+            <img class="wechat-code" src="assets/imgs/wechat_me.jpg">
+        </div>
+    </div>
+</body>
+</html>

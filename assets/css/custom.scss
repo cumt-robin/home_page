@@ -1,0 +1,197 @@
+html,body,ul {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+	font: 0.4rem/1.5 "Helvetica Neue", Helvetica, "PingFang SC", Tahoma, "Hiragino Sans GB", "Heiti SC", Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    text-align: center;
+    color: #fff;
+    &:nth-child(1) {
+        background: url(../imgs/bg1.jpg);
+        .tableCell {
+            background-color: rgba(0, 0, 0, .3);
+        }
+    }
+    &:nth-child(3) {
+        .tableCell {
+            background-color: rgba(0, 0, 0, .2);
+        }
+    }
+    &:nth-child(4) {
+        .nav-icons {
+            > li {
+                display: inline-block;
+                i.icon {
+                    box-shadow: 0 0 0.3rem 0.03rem #ebfbe9;
+                }
+            }
+        }
+    }
+}
+
+h3 {
+    font-size: 0.4rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 0.4rem;
+}
+
+.sub-title {
+    font-size: 0.24rem;
+    color: #76ffc1;
+}
+
+.nav-icons {
+    > li {
+        display: inline-block;
+        + li {
+            margin-left: 0.2rem;
+        }
+        i.icon {
+            box-shadow: 0 0 0.3rem 0.03rem #1ea0e1;
+        }
+    }
+}
+
+.tag-icons {
+    > li {
+        display: inline-block;
+        + li {
+            margin-left: 0.15rem;
+        }
+        .tag-txt {
+            font-size: 0.14rem;
+            color: #ecfeff;
+        }
+    }
+}
+
+i.icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    &.icon-blog {
+        background: url(../imgs/blog.png);
+    }
+    &.icon-hexo {
+        background: url(../imgs/hexo.png);
+    }
+    &.icon-angular {
+        background: url(../imgs/angular.png);
+    }
+    &.icon-github {
+        background: url(../imgs/github.png);
+    }
+    &.icon-csdn {
+        background: url(../imgs/csdn.png);
+    }
+
+    &.icon-vue {
+        background: url(../imgs/vue.png);
+    }
+    &.icon-angular2 {
+        background: url(../imgs/angular2.png);
+    }
+    &.icon-knockout {
+        background: url(../imgs/knockout.png);
+    }
+    &.icon-jquery {
+        background: url(../imgs/jquery.png);
+    }
+    &.icon-h5 {
+        background: url(../imgs/h5.png);
+    }
+    &.icon-css3 {
+        background: url(../imgs/css3.png);
+    }
+    &.icon-ele {
+        background: url(../imgs/ele.png);
+    }
+    &.icon-layui {
+        background: url(../imgs/layui.png);
+    }
+    &.icon-nodejs {
+        width: 40px;
+        background: url(../imgs/nodejs.png);
+    }
+    &.icon-express {
+        background: url(../imgs/express.png);
+    }
+    &.icon-socket {
+        background: url(../imgs/socket.png);
+    }
+    &.icon-webpack {
+        background: url(../imgs/webpack.png);
+    }
+    &.icon-gulp {
+        background: url(../imgs/gulp.png);
+    }
+    &.icon-sass {
+        background: url(../imgs/sass.png);
+    }
+    &.icon-nwjs {
+        background: url(../imgs/nwjs.png);
+    }
+}
+
+#fullPage-nav {
+    .active {
+        transform: scale3d(1.4,1.4,1);
+    }
+    &.firstpage {
+        span {
+            border: 1px solid #5affab;
+        }
+        .active span {
+            background-color: #8fe579;
+        }
+    }
+}
+
+@media screen and (max-width:1100px) {
+    h3 {
+        font-size: 0.32rem;
+        margin: 0;
+        &.tags-title {
+            font-size: 0.2rem;
+        }
+        &.contact {
+            margin-bottom: 0.1rem;
+        }
+    }
+    p {
+        font-size: 0.18rem;
+        &.sub-title {
+            font-size: 0.2rem;
+        }
+    }
+    #fullPage-nav.right {
+        right: 0;
+    }
+    .tag-icons {
+        padding: 0.16rem;
+    }
+    .wechat-code {
+        width: 80%;
+        margin-top: 0.2rem;
+    }
+}
