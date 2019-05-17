@@ -104,6 +104,10 @@ i.icon {
     &.icon-csdn {
         background: url(../imgs/csdn.png);
     }
+    &.icon-juejin {
+        background: url(../imgs/juejin.png);
+        background-position: -4px 0;
+    }
 
     &.icon-vue {
         background: url(../imgs/vue.png);
