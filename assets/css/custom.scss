@@ -54,6 +54,13 @@ p {
     font-size: 0.4rem;
 }
 
+.link {
+    display: block;
+    font-size: 0.24rem;
+    margin-top: 0.2rem;
+    text-decoration: none;
+}
+
 .sub-title {
     font-size: 0.24rem;
     color: #76ffc1;
@@ -197,5 +204,8 @@ i.icon {
     .wechat-code {
         width: 80%;
         margin-top: 0.2rem;
+    }
+    .link {
+        font-size: 0.16rem;
     }
 }

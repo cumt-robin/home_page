@@ -1,0 +1,29 @@
+{
+  "name": "home_page",
+  "version": "1.0.0",
+  "description": "tusi home page",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cumt-robin/home_page.git"
+  },
+  "keywords": [
+    "Tusi",
+    "homepage"
+  ],
+  "author": "Tusi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cumt-robin/home_page/issues"
+  },
+  "homepage": "https://github.com/cumt-robin/home_page#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2"
+  }
+}
