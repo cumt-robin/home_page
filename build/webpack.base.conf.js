@@ -122,16 +122,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: resolve("static"),
-        to: devMode ? config.dev.assetsSubDirectory : config.build.assetsSubDirectory,
-        ignore: ['*.css']
-      },
-      {
-        from: resolve("static"),
-        test: /\.css/,
-        to: devMode ? config.dev.assetsSubDirectory : config.build.assetsSubDirectory,
-        transform(content) {
-          return new CleanCSS({}).minify(content).styles
-        }
+        to: devMode ? config.dev.assetsSubDirectory : config.build.assetsSubDirectory
       }
     ])
   ],
