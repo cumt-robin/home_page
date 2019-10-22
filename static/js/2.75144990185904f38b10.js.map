@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/js/about.js"],"names":["alert"],"mappings":"4EAEAA,MAAM,oB","file":"static/js/2.75144990185904f38b10.js","sourcesContent":["// import { test } from './common/helper';\r\n// test();\r\nalert('about.js被动态插入了');\r\n"],"sourceRoot":""}
