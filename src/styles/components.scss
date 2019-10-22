@@ -1,0 +1,18 @@
+button {
+    &.btn-more {
+        padding: 6px 10px;
+        background-color: #409EFF;
+        color: #fff;
+        border-radius: 4px;
+        border: 0;
+        margin-top: 20px;
+    }
+    &.btn-submit {
+        color: #fff;
+        background: #409EFF;
+        font-size: 14px;
+        padding: 13px 20px;
+        border: 0;
+        font-weight: 700;
+    }
+}

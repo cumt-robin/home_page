@@ -1,0 +1,17 @@
+@keyframes arrow-to-left {
+    from {
+        transform: translate3d(-50%, -50%, 0);
+    }
+    to {
+        transform: translate3d(calc(-50% - 20px), -50%, 0);
+    }
+}
+
+@keyframes arrow-to-right {
+    from {
+        transform: translate3d(-50%, -50%, 0);
+    }
+    to {
+        transform: translate3d(calc(-50% + 20px), -50%, 0);
+    }
+}
