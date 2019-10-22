@@ -78,6 +78,7 @@
     font-size: 0;
     z-index: 1;
     transition: background-color .3s ease-in-out;
+    box-sizing: border-box;
     &:hover {
         background-color: rgba(0, 0, 0, .5);
     }
@@ -610,3 +611,5 @@
         padding: 10px;
     }
 }
+
+@import "./responsive.scss";

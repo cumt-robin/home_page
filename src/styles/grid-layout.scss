@@ -49,3 +49,55 @@
         left: 1 / 24 * $i * 100%;
     }
 }
+
+// xs
+@media screen and (max-width: 767px) {
+    .row {
+        &.gap-xs-20 {
+            margin-right: -10px;
+            margin-left: -10px;
+            [class*=col-] {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+// sm
+@media screen and (min-width: 768px) {
+    .row {
+        &.gap-sm-20 {
+            margin-right: -10px;
+            margin-left: -10px;
+            [class*=col-] {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+// md
+@media screen and (min-width: 992px) {
+
+}
+
+// lg
+@media screen and (min-width: 1200px) {
+    .row {
+        &.gap-lg-30 {
+            margin-right: -15px;
+            margin-left: -15px;
+            [class*=col-] {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+// xl
+@media screen and (min-width: 1920px) {
+
+}

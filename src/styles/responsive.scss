@@ -1,0 +1,82 @@
+@media screen and (max-width: 1440px) {
+    // 导航
+    .navbar {
+        padding: 20px 40px;
+        .logo {
+            margin-right: 40px;
+        }
+        .nav-list {
+            width: 800px;
+        }
+    }
+
+    // 第一屏
+    .my-introduce {
+        left: 140px;
+    }
+
+    // 第二屏
+    .learning-info {
+        .card-plain {
+            width: 580px;
+            height: 600px;
+        }
+        .control-arrow {
+            &.icon-left-circle {
+                margin-left: -380px;
+            }
+            &.icon-right-circle {
+                margin-left: 380px;
+            }
+        }
+        .swiper-container .swiper-slide {
+            width: 360px;
+        }
+    }
+    
+    // 第三屏
+    .work-info {
+        .swiper-container {
+            width: 800px;
+            .swiper-slide {
+                .title {
+                    font-size: 24px;
+                }
+                .subtitle {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    // 第四屏
+    .project-info {
+        width: 800px;
+    }
+
+    // 第五屏
+    .newest-info {
+        width: 800px;
+    }
+
+    // 第六屏
+    .contact-info {
+        .contact-wrapper {
+            width: 800px;
+        }
+        .social-list {
+            >li {
+                width: 50px;
+                height: 50px;
+                svg {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    
+}
