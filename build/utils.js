@@ -23,7 +23,7 @@ function getHtmlWebpackPluginInstance(pageName, title, minify = false) {
     template: `src/${pageName}.html`,
     favicon: joinPath('favicon.ico'),
     title: title || 'Tusi博客的个人主页',
-    chunks: ['manifest', 'corejs', 'vendors', pageName],
+    chunks: ['manifest', 'shim', 'vendors', pageName],
     minify: minify ? {
       removeComments: true,
       collapseWhitespace: true,

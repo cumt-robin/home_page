@@ -1,7 +1,6 @@
 @import "./vars.scss";
 
 .row {
-    display: block;
     box-sizing: border-box;
     margin-right: -15px;
     margin-left: -15px;
@@ -50,7 +49,7 @@
     }
 }
 
-// xs
+// xs, <768px
 @media screen and (max-width: 767px) {
     .row {
         &.gap-xs-20 {
@@ -62,9 +61,29 @@
             }
         }
     }
+
+    @for $i from 0 through 24 {
+        .col-xs-#{$i} {
+            width: 1 / 24 * $i * 100%;
+        }
+    
+        .col-offset-xs-#{$i} {
+            margin-left: 1 / 24 * $i * 100%;
+        }
+    
+        .col-pull-xs-#{$i} {
+            position: relative;
+            right: 1 / 24 * $i * 100%;
+        }
+    
+        .col-push-xs-#{$i} {
+            position: relative;
+            left: 1 / 24 * $i * 100%;
+        }
+    }
 }
 
-// sm
+// sm, >=768px
 @media screen and (min-width: 768px) {
     .row {
         &.gap-sm-20 {
@@ -76,14 +95,52 @@
             }
         }
     }
+
+    @for $i from 0 through 24 {
+        .col-sm-#{$i} {
+            width: 1 / 24 * $i * 100%;
+        }
+    
+        .col-offset-sm-#{$i} {
+            margin-left: 1 / 24 * $i * 100%;
+        }
+    
+        .col-pull-sm-#{$i} {
+            position: relative;
+            right: 1 / 24 * $i * 100%;
+        }
+    
+        .col-push-sm-#{$i} {
+            position: relative;
+            left: 1 / 24 * $i * 100%;
+        }
+    }
 }
 
-// md
+// md, >=992px
 @media screen and (min-width: 992px) {
-
+    @for $i from 0 through 24 {
+        .col-md-#{$i} {
+            width: 1 / 24 * $i * 100%;
+        }
+    
+        .col-offset-md-#{$i} {
+            margin-left: 1 / 24 * $i * 100%;
+        }
+    
+        .col-pull-md-#{$i} {
+            position: relative;
+            right: 1 / 24 * $i * 100%;
+        }
+    
+        .col-push-md-#{$i} {
+            position: relative;
+            left: 1 / 24 * $i * 100%;
+        }
+    }
 }
 
-// lg
+// lg, >=1200px
 @media screen and (min-width: 1200px) {
     .row {
         &.gap-lg-30 {
@@ -95,9 +152,47 @@
             }
         }
     }
+
+    @for $i from 0 through 24 {
+        .col-lg-#{$i} {
+            width: 1 / 24 * $i * 100%;
+        }
+    
+        .col-offset-lg-#{$i} {
+            margin-left: 1 / 24 * $i * 100%;
+        }
+    
+        .col-pull-lg-#{$i} {
+            position: relative;
+            right: 1 / 24 * $i * 100%;
+        }
+    
+        .col-push-lg-#{$i} {
+            position: relative;
+            left: 1 / 24 * $i * 100%;
+        }
+    }
 }
 
-// xl
+// xl, >=1920px
 @media screen and (min-width: 1920px) {
-
+    @for $i from 0 through 24 {
+        .col-xl-#{$i} {
+            width: 1 / 24 * $i * 100%;
+        }
+    
+        .col-offset-xl-#{$i} {
+            margin-left: 1 / 24 * $i * 100%;
+        }
+    
+        .col-pull-xl-#{$i} {
+            position: relative;
+            right: 1 / 24 * $i * 100%;
+        }
+    
+        .col-push-xl-#{$i} {
+            position: relative;
+            left: 1 / 24 * $i * 100%;
+        }
+    }
 }

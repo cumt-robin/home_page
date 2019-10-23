@@ -1,8 +1,5 @@
 @import "./vars.scss";
-@import "./reset.scss";
 @import "./mixins.scss";
-@import "./atom.scss";
-@import "./grid-layout.scss";
 @import "./animations.scss";
 @import "./components.scss";
 
@@ -129,6 +126,9 @@
     top: 0;
     right: 0;
     z-index: 2;
+    img {
+        width: 149px;
+    }
 }
 
 .fp-section {

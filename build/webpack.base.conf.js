@@ -6,8 +6,6 @@ const webpack = require("webpack")
 const HappyPack = require('happypack')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const CleanCSS = require('clean-css');
-const Uglify = require("uglify-es");
 const devMode = process.env.NODE_ENV === 'development';
 
 function resolve(dir) {
@@ -17,7 +15,7 @@ function resolve(dir) {
 module.exports = {
   context: path.resolve(__dirname, "../"),
   entry: {
-    corejs: "./src/js/common/shim.js",
+    shim: "./src/js/common/shim.js",
     index: "./src/js/index.js",
     about: "./src/js/about.js"
   },

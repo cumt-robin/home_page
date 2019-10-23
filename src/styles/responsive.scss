@@ -78,5 +78,27 @@
 }
 
 @media screen and (max-width: 1050px) {
-    
+    html {
+        font-size: 100px;
+    }
+    .navbar {
+        display: none;
+    }
+    .forkme img {
+        width: 1rem;
+    }
+    .my-introduce {
+        top: 2rem;
+        left: 1rem;
+        .avatar-wrap {
+            $avatar-size: 2rem;
+            .avatar-cover {
+                width: $avatar-size;
+                height: $avatar-size;
+            }
+            .avatar {
+                width: $avatar-size;
+            }
+        }
+    }
 }

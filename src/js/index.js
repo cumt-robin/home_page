@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import "@/styles/common.scss";
 import "@/styles/index.scss";
 import "@/styles/iconfont.scss";
 import "@/styles/animate.clip.css";
