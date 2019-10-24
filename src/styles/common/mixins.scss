@@ -19,8 +19,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-all;
-    /* autoprefixer: ignore next */
+    /*! autoprefixer: off */
     -webkit-box-orient: vertical;
-    /* autoprefixer: ignore next */
+    /*! autoprefixer: on */
     -webkit-line-clamp: $lineNum;
 }
