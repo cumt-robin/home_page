@@ -577,7 +577,7 @@ $(function() {
                         break outer;
                     }
                     if (rule === 'url' && fieldValue !== '' && !/^((ht|f)tps?):\/\/[\w\-]+(\.[\w\-]+)+([\w\-.,@?^=%&:\/~+#]*[\w\-@?^=%&\/~+#])?$/.test(fieldValue)) {
-                        layAlert('You entered an invalid url.');
+                        layAlert('You entered an invalid website URL.');
                         isValid = false;
                         break outer;
                     }
