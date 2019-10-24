@@ -269,14 +269,14 @@ $(function() {
                         '</div>' +
                     '</div>';
             const tpl3 = '<div class="swiper-slide">' +
-                        '<a href="https://mp.weixin.qq.com/s/EMatPwXQBQefY1sxq_qVlQ" target="_blank" title="点击查看新闻链接">' +
+                        '<a href="https://mp.weixin.qq.com/s/EMatPwXQBQefY1sxq_qVlQ" target="_blank" title="click to learn more">' +
                             '<div data-background="https://qncdn.wbjiang.cn/you_xiu_ying_jie_sheng.jpg" class="swiper-lazy">' +
                             '    <div class="swiper-lazy-preloader"></div>' +
                             '</div>' +
                         '</a>' +
                     '</div>' +
                     '<div class="swiper-slide">' +
-                        '<a href="https://mp.weixin.qq.com/s/erfEtxTRwXV91xuyw_83_A" target="_blank" title="点击查看新闻链接">' +
+                        '<a href="https://mp.weixin.qq.com/s/erfEtxTRwXV91xuyw_83_A" target="_blank" title="click to learn more">' +
                             '<div data-background="https://qncdn.wbjiang.cn/xiao_lv_zhi_xing.jpg" class="swiper-lazy">' +
                                 '<div class="swiper-lazy-preloader"></div>' +
                             '</div>' +
@@ -454,8 +454,8 @@ $(function() {
                 '<div class="blog-detail">' +
                     '<h3>$3</h3>' +
                     '<h4>$4</h4>' +
-                    '<div class="detail-bottom">' +
-                        '<span class="go-to-read">Read more</span>' +
+                    '<div class="go-to-read">' +
+                        'Read more' +
                     '</div>' +
                 '</div>' +
             '</div>' +
