@@ -38,6 +38,7 @@ rm(path.join(config.build.assetsRoot), err => {
       '  Opening index.html over file:// won\'t work.\n'
     ))
 
+    // 这里必须结束nodejs进程，不然post钩子无效，&&这种脚本也无法执行
     process.exit();
   })
 })

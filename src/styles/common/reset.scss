@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('//at.alicdn.com/t/webfont_hwkwpjymcf5.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/webfont_hwkwpjymcf5.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/webfont_hwkwpjymcf5.woff2') format('woff2'),
+    url('//at.alicdn.com/t/webfont_hwkwpjymcf5.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/webfont_hwkwpjymcf5.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/webfont_hwkwpjymcf5.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+}
+
+body {
+    margin: 0;
+    // font-family: "webfont";
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", Tahoma, "Hiragino Sans GB", "Heiti SC", Arial, "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}

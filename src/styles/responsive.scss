@@ -1,3 +1,5 @@
+@import "./common/mixins.scss";
+
 @media screen and (max-width: 1440px) {
     // 导航
     .navbar {
@@ -52,6 +54,14 @@
     // 第四屏
     .project-info {
         width: 800px;
+        .card-project .card-detail {
+            h3 {
+                font-size: 16px;
+            }
+            p {
+                @include multi-line-ellipse;
+            }
+        }
     }
 
     // 第五屏

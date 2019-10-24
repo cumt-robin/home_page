@@ -1,5 +1,5 @@
-@import "./vars.scss";
-@import "./mixins.scss";
+@import "./common/vars.scss";
+@import "./common/mixins.scss";
 @import "./animations.scss";
 @import "./components.scss";
 
@@ -236,11 +236,6 @@
                 color: #2e2e2e;
             }
         }
-        .big-word {
-            font-style: italic;
-            font-size: 40px;
-            margin-top: 80px;
-        }
     }
     .school-badge {
         vertical-align: text-bottom;
@@ -304,7 +299,7 @@
 .work-info {
     .swiper-container {
         width: 1200px;
-        height: 400px;
+        height: 440px;
         border-radius: 4px;
         .swiper-slide {
             font-size: 18px;
@@ -312,7 +307,7 @@
             box-sizing: border-box;
             padding: 40px 60px;
             .title {
-                font-size: 36px;
+                font-size: 32px;
                 font-weight: 300;
             }
             .subtitle {
@@ -327,7 +322,7 @@
             }
             .text {
                 font-size: 14px;
-                max-width: 600px;
+                max-width: 860px;
                 line-height: 24px;
                 margin-top: 30px;
                 p+p {
@@ -409,7 +404,7 @@
         }
         .card-detail {
             @include absolute-fill;
-            padding: 40px 30px;
+            padding: 18px 16px;
             box-sizing: border-box;
             background-color: #fff;
             transition: all .5s ease;
@@ -419,6 +414,7 @@
                 position: relative;
                 margin: 0;
                 color: #333;
+                font-size: 18px;
                 &::after {
                     @include common-after-border;
                     bottom: -18px;
@@ -572,7 +568,11 @@
             border-bottom: 2px solid #ccc;
         }
         textarea {
+            padding: 0;
+            margin-top: 10px !important;
             max-width: 100%;
+            max-height: 96px;
+            min-height: 48px;
         }
     }
     #allmap {

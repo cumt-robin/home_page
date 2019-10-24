@@ -1,8 +1,7 @@
 /* eslint-disable camelcase */
-import "@/styles/common.scss";
+import "@/styles/common/index.scss";
 import "@/styles/index.scss";
 import "@/styles/iconfont.scss";
-import "@/styles/animate.clip.css";
 import { loadScript, loadLink } from "./common/helper";
 // SVG
 import "@/icons/index.js";
@@ -53,10 +52,10 @@ $(function() {
 
     function initFullPage() {
         $('#fullPage').fullpage({
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+            anchors: ['hi', 'education', 'career', 'projects', 'blogs', 'contact'],
             menu: '#menu',
             navigation: true,
-            easingcss3: 'ease-in-out',
+            easingcss3: 'ease',
             controlArrows: false,
             loopHorizontal: true,
             scrollingSpeed: 400,
@@ -71,9 +70,9 @@ $(function() {
                     }, function() {
                         iconDom.addClass('shake animated');
                     });
-                    startAutoSlideVertical();
+                    startAutoSlideHorizontal();
                 } else {
-                    stopAutoSlideVertical();
+                    stopAutoSlideHorizontal();
                 }
 
                 if (index === 3) {
@@ -156,10 +155,10 @@ $(function() {
             },
             on: {
                 sliderMove: function(event) {
-                    stopAutoSlideVertical();
+                    stopAutoSlideHorizontal();
                 },
                 touchEnd: function(event) {
-                    startAutoSlideVertical();
+                    startAutoSlideHorizontal();
                 }
             }
         };
@@ -176,10 +175,10 @@ $(function() {
             },
             on: {
                 sliderMove: function(event) {
-                    stopAutoSlideVertical();
+                    stopAutoSlideHorizontal();
                 },
                 touchEnd: function(event) {
-                    startAutoSlideVertical();
+                    startAutoSlideHorizontal();
                 }
             }
         };
@@ -355,15 +354,15 @@ $(function() {
 
     function registerEvents() {
         $('.icon-left-circle').on('click', function() {
-            stopAutoSlideVertical();
+            stopAutoSlideHorizontal();
             $.fn.fullpage.moveSlideLeft();
-            startAutoSlideVertical();
+            startAutoSlideHorizontal();
         });
 
         $('.icon-right-circle').on('click', function() {
-            stopAutoSlideVertical();
+            stopAutoSlideHorizontal();
             $.fn.fullpage.moveSlideRight();
-            startAutoSlideVertical();
+            startAutoSlideHorizontal();
         });
 
         $('.focus-anim').on('mouseenter', function() {
@@ -394,13 +393,13 @@ $(function() {
         $('#btnSubmit').on('click', submitMessage);
     }
 
-    function startAutoSlideVertical() {
+    function startAutoSlideHorizontal() {
         autoScrollTimer = setInterval(function() {
             $.fn.fullpage.moveSlideRight();
         }, 5000);
     }
 
-    function stopAutoSlideVertical() {
+    function stopAutoSlideHorizontal() {
         clearInterval(autoScrollTimer);
         autoScrollTimer = null;
     }
@@ -456,7 +455,7 @@ $(function() {
                     '<h3>$3</h3>' +
                     '<h4>$4</h4>' +
                     '<div class="detail-bottom">' +
-                        '<span class="go-to-read">前往阅读</span>' +
+                        '<span class="go-to-read">Read more</span>' +
                     '</div>' +
                 '</div>' +
             '</div>' +

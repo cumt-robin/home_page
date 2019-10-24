@@ -13,3 +13,14 @@
     width: 100%;
     background: linear-gradient(to right, rgb(116, 235, 213), rgb(172, 182, 229));
 }
+
+@mixin multi-line-ellipse($lineNum: 3) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: ignore next */
+    -webkit-line-clamp: $lineNum;
+}
