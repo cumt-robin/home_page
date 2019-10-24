@@ -1,5 +1,9 @@
 # 版本更新日志
 
+## v2.3.3
+
+【词汇修改】Wisdom改为Intelligent
+
 ## v2.3.2
 
 【bug修复】解决打包时-webkit-box-orient: vertical被移除的问题
