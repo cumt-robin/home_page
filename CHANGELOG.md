@@ -1,5 +1,9 @@
 # 版本更新日志
 
+## v2.3.5
+
+【词汇修改】collection改为my favorites
+
 ## v2.3.4
 
 【bug修复】部分博客浮窗超长
