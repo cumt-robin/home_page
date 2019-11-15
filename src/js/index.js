@@ -50,6 +50,7 @@ $(function() {
 
     initSwiperProjects();
 
+    // 初始化fullpage
     function initFullPage() {
         $('#fullPage').fullpage({
             anchors: ['hi', 'education', 'career', 'projects', 'blogs', 'contact'],
@@ -61,7 +62,7 @@ $(function() {
             scrollingSpeed: 400,
             afterLoad: function(anchorLink, index) {
                 if (index === 2) {
-                    // education
+                    // education加载时，初始化第一个swiper实例
                     swiper1.init();
                     $.fn.fullpage.moveTo(2, 0);
                     const iconDom = $('.focus-anim >i').eq(0);
@@ -592,7 +593,7 @@ $(function() {
     }
 
     function renderMap() {
-        const locationPoint = new BMap.Point(112.87966, 28.239859);
+        const locationPoint = new BMap.Point(112.911, 28.202);
         map = new BMap.Map("allmap");
         map.enableScrollWheelZoom(true);
         map.enableDoubleClickZoom(true);
@@ -607,7 +608,7 @@ $(function() {
         const content = '<img width="100%" height="100%" style="object-fit:cover" src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/map/pic/item/d50735fae6cd7b896615ef2f032442a7d9330e25.jpg">';
 
         const searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
-            title: "湖南胜利者同盟大厦",
+            title: "梅溪湖金茂广场南塔",
             width: 240,
             height: 90,
             panel: "panel", // 检索结果面板
