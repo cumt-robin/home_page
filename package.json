@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "core-js": "^2.6.10",
+    "current-device": "^0.9.1",
     "swiper": "^5.1.0"
   },
   "devDependencies": {

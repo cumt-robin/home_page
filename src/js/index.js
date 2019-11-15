@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import device from 'current-device';
 import "@/styles/common/index.scss";
 import "@/styles/index.scss";
 import "@/styles/iconfont.scss";
@@ -14,6 +15,12 @@ import "@/icons/index.js";
 // Swiper.use([Navigation, Pagination, Parallax, Autoplay, Lazy, EffectCoverflow, Keyboard]);
 
 $(function() {
+    const isMobile = device.mobile();
+
+    if (isMobile) {
+        layer.msg('更多精彩内容请前往PC端查看！');
+    }
+
     var autoScrollTimer = null;
 
     var swiper1;
@@ -98,7 +105,7 @@ $(function() {
                 if (index === 6) {
                     // contact
                     loadBgImg('contact-section');
-                    if (!map) {
+                    if (!isMobile && !map) {
                         // 加载search插件
                         loadLink('http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css');
                         loadScript('http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js', document.querySelector('head')).then(res => {

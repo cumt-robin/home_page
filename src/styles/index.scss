@@ -521,6 +521,7 @@
     }
     .social-list {
         >li {
+            position: relative;
             display: inline-block;
             padding: 8px;
             border-radius: 100%;
@@ -538,6 +539,9 @@
                 margin-left: 10px;
             }
             svg {
+                position: absolute;
+                top: 7px;
+                left: 7px;
                 width: 48px;
                 height: 48px;
             }
