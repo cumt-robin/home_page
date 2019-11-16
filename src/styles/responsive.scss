@@ -140,10 +140,14 @@
             font-size: 0.3rem;
         }
         p {
-            @include multi-line-ellipse(4);
+            @include multi-line-ellipse(2);
             +p {
                 margin-top: 0.1rem;
             }
+        }
+        .swiper-container .swiper-slide {
+            width: 1.6rem;
+            height: 2.4rem;
         }
     }
     

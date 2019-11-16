@@ -78,7 +78,7 @@ $(function() {
                     }, function() {
                         iconDom.addClass('shake animated');
                     });
-                    startAutoSlideHorizontal();
+                    // startAutoSlideHorizontal();
                 } else {
                     stopAutoSlideHorizontal();
                 }
@@ -118,6 +118,9 @@ $(function() {
                 if (index === 5) {
                     // 离开blog section
                     closeBlogLoading();
+                } else if (index === 6) {
+                    // 离开联系页，如果打开了微信tips层，需要关闭
+                    layer.closeAll('tips');
                 }
             },
             onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
@@ -401,29 +404,34 @@ $(function() {
         $('#btnSubmit').on('click', submitMessage);
     }
 
+    // 5S后开始第二页水平fullpage的自动滚动
     function startAutoSlideHorizontal() {
         autoScrollTimer = setInterval(function() {
             $.fn.fullpage.moveSlideRight();
         }, 5000);
     }
 
+    // 停止第二页水平fullpage的自动滚动
     function stopAutoSlideHorizontal() {
         clearInterval(autoScrollTimer);
         autoScrollTimer = null;
     }
 
+    // 解锁fullpage的滚动
     function unlockFullpageScroll() {
         $.fn.fullpage.setAllowScrolling(true);
         $.fn.fullpage.setKeyboardScrolling(true);
         $('#fp-nav').show();
     }
 
+    // 锁定fullpage的滚动
     function lockFullpageScroll() {
         $.fn.fullpage.setAllowScrolling(false);
         $.fn.fullpage.setKeyboardScrolling(false);
         $('#fp-nav').hide();
     }
 
+    // 获取博客列表
     function getBlogList() {
         blogLoading = layer.load();
         $.ajax({
@@ -448,6 +456,7 @@ $(function() {
         });
     }
 
+    // 关闭loading
     function closeBlogLoading() {
         if (blogLoading) {
             layer.close(blogLoading);
@@ -455,6 +464,7 @@ $(function() {
         }
     }
 
+    // 渲染博客卡片
     function renderBlogItem(item, no) {
         const tpl = '<a href="$1" target="_blank">' +
             '<img src="$2">' +
@@ -491,6 +501,7 @@ $(function() {
         }
     }
 
+    // 弹出tips层
     function showTipsMsg() {
         const _dom = $(this);
         const infoType = _dom.data('type');
@@ -510,6 +521,7 @@ $(function() {
         }
     }
 
+    // 提交表单
     function submitMessage() {
         const formDom = $('#formComment');
         const fields = formDom.serializeArray();
@@ -540,6 +552,7 @@ $(function() {
         }
     }
 
+    // 验证表单
     function validateForm(formDom, fields) {
         let isValid = true;
         outer: for (let index = 0; index < fields.length; index++) {
@@ -599,6 +612,7 @@ $(function() {
         layer.alert(msg, { title: 'Tips', btn: 'Got it' });
     }
 
+    // 渲染地图
     function renderMap() {
         const locationPoint = new BMap.Point(112.911, 28.202);
         map = new BMap.Map("allmap");
@@ -612,7 +626,7 @@ $(function() {
         });
         map.addOverlay(marker);
 
-        const content = '<img width="100%" height="100%" style="object-fit:cover" src="https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/map/pic/item/d50735fae6cd7b896615ef2f032442a7d9330e25.jpg">';
+        const content = '<img width="100%" height="100%" style="object-fit:cover" src="http://www.csmxh.com/uploads/allimg/140505/1-140505125103564.jpg">';
 
         const searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
             title: "梅溪湖金茂广场南塔",
@@ -630,6 +644,7 @@ $(function() {
         searchInfoWindow.open(locationPoint);
     }
 
+    // 重新激活动画，需要传入移除动画class的方法，和设置动画class的方法
     function triggerC3Animation(removeAnimClass, setAnimClass) {
         removeAnimClass();
         window.requestAnimFrame(function() {
