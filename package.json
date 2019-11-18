@@ -1,6 +1,6 @@
 {
   "name": "home_page_new",
-  "version": "2.3.6",
+  "version": "2.3.7",
   "description": "Tusi's home page",
   "scripts": {
     "start": "npm run dev",
